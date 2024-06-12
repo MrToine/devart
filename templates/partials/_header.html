@@ -1,0 +1,20 @@
+<!-- TODO : Améliorer la mise en page -->
+<nav>
+    <div class="brand"><i class="fa-solid fa-terminal"></i>Partir de zéro<br><span class="subtitle comment">/* Anthony Violet */</span></div>
+    <div class="navbar">
+        <ul id="menu">
+            <li><a href="/" class="house"><i class="fa-solid fa-house"></i></a></li>
+            <li>
+                <a href="{% url 'courses:list' %}">Les cours</a>
+                <ul>
+                    <li><a href="/courses/1-developpement-web-dynamique/">PHP</a></li>
+                    <li><a href="?page=home#bases">HTML et CSS</a></li>
+                    <li><a href="?page=home#variables">Javascript</a></li>
+                    <li><a href="?page=home">Python</a></li>
+                </ul>
+            </li>
+            <li><a href="">Tutoriels</a></li>
+            <li><a href="">Billets</a></li>
+        </ul>
+    </div>
+</nav>

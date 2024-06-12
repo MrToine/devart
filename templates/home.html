@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section class="edito">
+    <p>Bienvenue sur <strong>Partir de zero</strong>, votre nouvelle communauté dédiée à l'apprentissage des langages informatiques !</p>
+
+    <p>Je crois que l'apprentissage de la programmation et du développement est une aventure passionnante et accessible à tous. Que vous soyez un débutant curieux ou un développeur expérimenté en quête de nouvelles compétences, la plateforme est conçue pour vous accompagner à chaque étape de votre parcours.</p>
+</section>
+    {% block course %}
+        {% include "courses/partials/list.html" %}
+    {% endblock %}
+{% endblock %}

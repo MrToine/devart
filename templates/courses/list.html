@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section>
+    <h1>Liste des cours</h1>
+    <ul>
+        {% for course in courses %}
+            <div class="container-inline">
+                <div class="card">
+                    <div class="card-header">
+                        {% load static %}
+                        <img class="thumbnails" src="{{ course.thumbnail.url }}" alt="Image des cours sur {{ course.name }}" class="src">
+                    </div>
+                    <div class="card-body">
+                        <h2><a href="{% url 'courses:show' course.id course.name|slugify %}">{{ course.name }}</a></h2>
+                        {{ course.content|truncatechars_html:250 }}
+                    </div>
+                </div>
+            </div>         
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

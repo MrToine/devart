@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section>
+    <h1>{{ course.name }}</h1>
+    <p class="def-author">Un cours proposé par {{ course.author }}</p>
+    <p>{{ course.content }}</p>
+    <ol>
+        {% for lesson in lessons %}
+            <li><a href="#{{ lesson.name|slugify }}">{{ lesson.name }}</a></li>
+        {% endfor %}
+    </ol>
+    {% for lesson in lessons %}
+        <h2 id="{{ lesson.name|slugify }}">{{ lesson.name }}</h2>
+        {{ lesson.content|safe }}
+    {% endfor %}
+</section>
+{% endblock %}
